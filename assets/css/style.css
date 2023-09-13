@@ -314,16 +314,146 @@ footer a:hover{color: var(--orange) !important;}
 
 @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 767px)  {
   .h2, h2 {font-size: calc(1.325rem + 3.9vw);}  
-  .home .banner .caption {top: 6em; width: 74vw; font-size: 40px;}
+  .home .banner .caption {width: 87vw; font-size: 21px; text-align: center; transform: translate(7%,-56%);}
 
+  header .logo { width: 194px; float: none; margin: 0px auto; }
+  header .navigation { display: none; flex-direction: column; width: 100vw; height: 100vh; position: fixed; background-color: #000000d1; overflow: hidden; top: 0px; left: 0px;}
+
+/* Menu Icon */
+.hamb{
+  cursor: pointer;
+  padding: 47px 20px;
+  z-index: 10;
+  position: absolute;
+  right: 3em;
+
+}/* Style label tag */
+
+.hamb-line {
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before{
+  border-top: solid 1px var(--purple);
+  border-bottom: solid 1px var(--purple);
+  content: '';
+  display: block;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 42px;
+  height: 13px;
+
+}
+.hamb-line::before{
+  top: 5px;
+}
+.hamb-line::after{
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+
+/* Toggle menu icon */
+.side-menu:checked ~ .navigation{
+  max-height: 100%;
+  display: flex;
+  color:var(--white);
+}
+.side-menu:checked ~ .navigation ul li{
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+
+
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top:0;
+  border-top: solid 1px var(--white);
+  border-bottom: solid 1px var(--white);
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+
+
+#stage a {
+  position: absolute;
+}
+#stage a img {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+#stage a:nth-of-type(1) {
+  animation-name: fader;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  z-index: 20;
+}
+#stage a:nth-of-type(2) {
+  z-index: 10;
+}
+#stage a:nth-of-type(n+3) {
+  display: none;
+}
+
+@keyframes fader {
+  from { opacity: 1.0; }
+  to   { opacity: 0.0; }
+}
+
+/* Nav menu */
+
+.side-menu:checked ~ nav{
+  max-height: 100%;
+  display: block;
+  width: 100%;
+  margin-top: -2em;
+  height: 100ch;
+  margin-left: -48px;
+  padding-top: 7em;
+  padding-left: 6em;
+}
+
+  .banner {z-index: 0;}
+  .inner .bannerimg { height: 39vh;}
   .inner .banner .title h2{font-size:36px;}
-  .hamb {right: 2em; }
+  .hamb {right: 2em; z-index: 17; top: 1em; }
   .side-menu:checked ~ nav { padding-top: 10em; padding-left: 0em;}
-  nav ul a { width: 100%;}
 
-  .aboutbrief { padding: 4em 0px; }
-  .aboutbrief .brief {font-size: 37px;}
-  .aboutbrief .contbody { position: relative; }
+  header .topnav { margin-top:3em; flex-flow: column; font-size: 18px; font-weight:300;}
+  header .topnav li{ margin-bottom:1em;}
+  header .topnav .social{padding:1em 0; margin:0px; border-bottom:0.5px solid whitesmoke;}
+  header .topnav .social li{display:inline; width: auto !important;}
+  nav{ margin-top: 0em;}
+
+  nav ul li { margin:1em 0px; }
+  nav ul a { width: 100%; font-size: 30px; font-weight:300; }
+
+  .about .row{flex-direction: column-reverse;}
+  .about .imgbx {height: 43vh; margin-top: 0px; margin-bottom: 3em;}
+
+  .capabilities .capabilityboxes {display: block;}
+
+  .resources .resourcebx {margin-bottom: 3em; height:auto; min-height: 399px;}
+
+  .calltoaction .col-lg-6{margin-bottom:3em;}
+
+  .ourpeople .team { display: block;}
 
   .aboutcont {padding: 2em 0px; }
   .missionvision { grid-template-columns: auto;}
@@ -336,10 +466,15 @@ footer a:hover{color: var(--orange) !important;}
   .calltoaction .shade .brief { text-align: left; margin-bottom: 1em; font-size: 33px; }  
   .experts .expertimg { width: 100%; height: 317px;}
 
+  .contactForm {margin-bottom:3em;}
+
   .quickcontact{margin-top:3em;}
 
-  footer .footmenu ul li {display: list-item; margin-bottom: 1em;}
+  footer .footmenu li { display: list-item; list-style: none; text-align: center; padding: 0.5em 0px;}
+  footer .footmenu li a{margin-right:0px;}
   footer .social{margin-top: 3em;}
   footer .social ul li a { margin: 0 13px;}
+
+  footer .copy { text-align:center;}
 
 }
