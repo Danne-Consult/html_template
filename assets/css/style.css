@@ -430,7 +430,7 @@ footer a:hover{color: var(--orange) !important;}
 }
 
   .banner {z-index: 0;}
-  .inner .bannerimg { height: 39vh;}
+  .home .banner .caption h2 { font-size: 47px;}
   .inner .banner .title h2{font-size:36px;}
   .hamb {right: 2em; z-index: 17; top: 1em; }
   .side-menu:checked ~ nav { padding-top: 10em; padding-left: 0em;}
