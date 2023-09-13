@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home : 3UJ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/flexslider.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="assets/js/jquery.js"></script>
+</head>
+<body class="inner">
+    <header>
+        <article>
+            <div class="logo"><a href="#"><img src="assets/images/logo.svg" alt="3UJ"></a></div>
+            <div class="navigation">
+                <div class="topnav">
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News & Updates</a></li>
+                    </ul> 
+                    <ul class="social">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>    
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">What We Do</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </article>
+    </header>
+    <div class="container12 banner">
+        <div class="bannerimg" style="background-image: url(assets/images/banner3.jpg);"></div>
+        <div class="title">
+            <h2>Contact Us</h2>
+        </div>
+    </div>
+
+    <div class="container12 articlebar">
+        <article>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h4>Quick Contact</h4>
+                    <form class="contactForm">
+                        <input type="text" name="name" placeholder="Names (required)" required><br>
+                        <input type="email" name="email" placeholder="Email (required)" required><br>
+                        <textarea name="message" id="" cols="30" rows="3" placeholder="Message"></textarea>
+                        <input type="submit" name="Submit" class="submit" value="Submit" id="">
+                    </form>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Head Office</h4>
+                    <p>Langata Rd Nairobi</p>
+                    <p>Tel: +254 721 476853</p>
+                    <p>Inquiry Email: info@3uj.org</p>
+
+                </div>
+                
+            </div>
+           
+        </article>
+    </div>
+
+   
+    <footer>
+        <article>
+            <div class="row">
+                <div class="col-lg-9">
+                    <ul class="footmenu">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">What We Do</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+
+                    <ul class="footmenu">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>  
+
+                </div>
+                <div class="col-lg-3">
+                    <a href="#"><img  class="footlogo" src="assets/images/logo_reverse.svg" alt="3UJ"></a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="copy">&copy2023 3UJ | info@3uj.org</div>
+        </article>
+    </footer>
+    <script src="assets/js/jquery.flexslider-min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.flexslider').flexslider({
+                animation: "fade"
+            });
+        });
+    </script>
+</body>
+</html>
